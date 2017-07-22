@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { TarefaComponent } from './tarefa/tarefa.component';
 import { TarefasComponent } from './tarefa/tarefas.component';
+import { TarefaNewComponent } from './tarefa/tarefa-new.component';
 
 import { UsuarioService } from './services/usuario.service';
 import { TarefaService } from './services/tarefa.service';
@@ -18,7 +19,8 @@ import { TarefaService } from './services/tarefa.service';
     AppComponent,
     UsuarioComponent,
     TarefaComponent,
-    TarefasComponent
+    TarefasComponent,
+    TarefaNewComponent
   ],
   imports: [
     BrowserModule,

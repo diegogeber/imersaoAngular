@@ -1,0 +1,8 @@
+<h2>Adicionar tarefa</h2>
+<div>
+  <label>Título:</label> <input #tarefaTitulo />
+  <label>Descrição:</label> <input #tarefaDescricao />
+  <button (click)="add(tarefaTitulo.value, tarefaDescricao.value);">
+    Add
+  </button>
+</div>
