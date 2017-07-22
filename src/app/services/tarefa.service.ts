@@ -19,6 +19,14 @@ export class TarefaService {
       .catch(this.handleError);
   }
 
+  search(term: string): Promise<Tarefa[]> {
+    return this.http.get(`http://localhost:8080/todo/titulo/${term}`)
+      .toPromise()
+      .then(response => response.json() as Tarefa[])
+      .catch(this.handleError);
+  }
+
+
   create(titulo: string, descricao: string): Promise<Tarefa> {
     return this.http
       .post(this.tarefasUrl, JSON.stringify({titulo: titulo, descricao: descricao, criador: 1}), {headers: this.headers})
@@ -26,13 +34,6 @@ export class TarefaService {
       .then(res => res.json().data as Tarefa)
       .catch(this.handleError);
   }
-
-  // delete2(id:number):Promise<string>{
-  //   return this.http.delete(this.urlBase+"/"+id)
-  //   .toPromise()
-  //   .then(Response=>Response.json)
-  //   .catch(this.handleError);
-  // }
 
   delete(id: number): Promise<void> {
     const url = `${this.tarefasUrl}/${id}`;

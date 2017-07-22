@@ -4,12 +4,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { TarefaComponent } from '../tarefa/tarefa.component';
 import { TarefasComponent } from '../tarefa/tarefas.component';
 import { TarefaNewComponent } from '../tarefa/tarefa-new.component';
+import { TarefaSearchComponent } from '../tarefa/tarefa-search.component';
 import { UsuarioComponent } from '../usuario/usuario.component';
 
 const routes: Routes = [
   { path: 'tarefa',  component: TarefaComponent },
   { path: 'tarefas',  component: TarefasComponent },
   { path: 'tarefaNew',  component: TarefaNewComponent },
+  { path: 'tarefaSearch',  component: TarefaSearchComponent },
   { path: 'usuario',     component: UsuarioComponent }
 ];
 
