@@ -27,12 +27,20 @@ export class TarefaService {
       .catch(this.handleError);
   }
 
-  // create2(tarefa: Tarefa): Promise<string>{
-  //   return this.http.post(this.tarefasUrl, tarefa)
-  //     .toPromise()
-  //     .then(response => response.json)
-  //     .catch(this.handleError);
+  // delete2(id:number):Promise<string>{
+  //   return this.http.delete(this.urlBase+"/"+id)
+  //   .toPromise()
+  //   .then(Response=>Response.json)
+  //   .catch(this.handleError);
   // }
+
+  delete(id: number): Promise<void> {
+    const url = `${this.tarefasUrl}/${id}`;
+    return this.http.delete(url, {headers: this.headers})
+      .toPromise()
+      .then(() => null)
+      .catch(this.handleError);
+  }
 
   // getTarefasCriador(id:number):Promise<Tarefa[]>{
   //   return this.http.get(this.urlBase+"/criador/"+id)
@@ -54,14 +62,6 @@ export class TarefaService {
   //   return this.http.put(this.urlBase+"/"+tarefa.id, tarefa)
   //   .toPromise()
   //   .then(()=>tarefa)
-  //   .catch(this.handleError);
-  // }
-  //
-  //
-  // delete(id:number):Promise<string>{
-  //   return this.http.delete(this.urlBase+"/"+id)
-  //   .toPromise()
-  //   .then(Response=>Response.json)
   //   .catch(this.handleError);
   // }
 

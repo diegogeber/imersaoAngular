@@ -3,5 +3,7 @@
   <li *ngFor="let tarefa of tarefas">
     <span class="badge">{{tarefa.id}}</span>
     <span>{{tarefa.titulo}}</span>
+    <button class="delete"
+            (click)="delete(tarefa); $event.stopPropagation()">x</button>
   </li>
 </ul>
