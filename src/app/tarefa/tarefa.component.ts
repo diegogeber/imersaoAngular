@@ -11,14 +11,13 @@ import { Router } from "@angular/router";
 })
 export class TarefaComponent implements OnInit {
   
-  tarefas:Tarefa[]
 
   constructor(private TarefaService: TarefaService, private Router:Router) { }
 
   ngOnInit() {
-    this.getTarefas();
+    this.getTarefas;
   }
-  getTarefas():void{
-    this.TarefaService.getTarefas();
-  }
+  
+  getTarefas = this.TarefaService.getTarefas();
+  
 }
