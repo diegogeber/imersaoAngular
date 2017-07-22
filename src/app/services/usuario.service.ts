@@ -6,7 +6,7 @@ import { Usuario } from '../shared/usuario';
 
 @Injectable()
 export class UsuarioService {
-  private urlBase:string = "localhost:8080/user";
+  private urlBase:string = "http://localhost:8080/user";
 
   private headers = new Headers({'content-type':'application/json'});
 
